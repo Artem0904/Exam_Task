@@ -29,9 +29,14 @@ void Employee::show() const
 {
 	Person::show();
 	cout << "Id   : #" << getId() << endl;
-	cout << "Work xperience     : " << getWorkEx() << endl;
+	cout << "Work experience     : " << getWorkEx() << endl;
 	cout << "Date of employment : ";
 	dateOfEmployment.printDate();
+}
+
+int Employee::calculateSalary() const
+{
+	return 0;
 }
 
 int Employee::counter = 0;

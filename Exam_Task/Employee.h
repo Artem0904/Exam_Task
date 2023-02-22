@@ -13,7 +13,8 @@ public:
     int getWorkEx() const;
     Date getDateOfEmployment() const;
 
-    void show() const;
+    virtual void show() const;
+    virtual int calculateSalary() const;
     
 private:
     int id;
