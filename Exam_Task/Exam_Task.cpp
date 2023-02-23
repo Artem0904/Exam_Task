@@ -19,4 +19,6 @@ int main()
 
 	FullTimeWorker workerF{ "Olga", "Boyko", "Vasylivna", 25, 3, {22, 10, 2022} };
 	workerF.show();
+
+	cout << "Branch test\n";
 }
