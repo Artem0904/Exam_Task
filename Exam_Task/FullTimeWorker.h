@@ -9,8 +9,8 @@ class FullTimeWorker :
 public:
     const int minSalary = 6500;
 
-    FullTimeWorker(const string& name, const string& surname, const string& byFatherName, const int& age, int workExperience, const Date& dateOfEmployment);
-    FullTimeWorker(const Person& person, int workExperience, const Date& dateOfEmployment);
+    FullTimeWorker(const string& name, const string& surname, const string& byFatherName, const int& age, int workExperience, const Date& dateOfEmployment, const string& assign);
+    FullTimeWorker(const Person& person, int workExperience, const Date& dateOfEmployment, const string& assign);
     FullTimeWorker(const Employee& employee);
 
     void show()const override;
