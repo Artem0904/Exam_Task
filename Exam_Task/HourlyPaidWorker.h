@@ -10,8 +10,8 @@ private:
     int rate;
     int workingHours;
 public:
-    HourlyPaidWorker(const string& name, const string& surname, const string& byFatherName, const int& age, int workExperience, const Date& dateOfEmployment, const int& rate, const int& workingHours);
-    HourlyPaidWorker(const Person& person, int workExperience, const Date& dateOfEmployment, const int& rate, const int& workingHours);
+    HourlyPaidWorker(const string& name, const string& surname, const string& byFatherName, const int& age, int workExperience, const Date& dateOfEmployment, const string& assign, const int& rate, const int& workingHours);
+    HourlyPaidWorker(const Person& person, int workExperience, const Date& dateOfEmployment, const string& assign,const int& rate, const int& workingHours);
     HourlyPaidWorker(const Employee& employee, const int& rate, const int& workingHours);
 
     void setRate(const int& rate);

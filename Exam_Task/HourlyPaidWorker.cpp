@@ -1,21 +1,22 @@
 #include "HourlyPaidWorker.h"
 
-HourlyPaidWorker::HourlyPaidWorker(const string& name, const string& surname, const string& byFatherName, const int& age, int workExperience, const Date& dateOfEmployment, const int& rate, const int& workingHours)
-	:Employee(name, surname, byFatherName, age, workExperience,dateOfEmployment)
+HourlyPaidWorker::HourlyPaidWorker(const string& name, const string& surname, const string& byFatherName, const int& age, int workExperience, const Date& dateOfEmployment, const string& assign, const int& rate, const int& workingHours)
+	:Employee(name, surname, byFatherName, age, workExperience,dateOfEmployment, assign)
 {
 	setRate(rate);
 	setHours(workingHours);
+
 }
 
-HourlyPaidWorker::HourlyPaidWorker(const Person& person, int workExperience, const Date& dateOfEmployment, const int& rate, const int& workingHours)
-	:Employee(person, workExperience, dateOfEmployment)
+HourlyPaidWorker::HourlyPaidWorker(const Person& person, int workExperience, const Date& dateOfEmployment, const string& assign, const int& rate, const int& workingHours)
+	:Employee(person, workExperience, dateOfEmployment, assign)
 {
 	setRate(rate);
 	setHours(workingHours);
 }
 
 HourlyPaidWorker::HourlyPaidWorker(const Employee& employee, const int& rate, const int& workingHours)
-	:Employee(employee.getName(), employee.getSurname(), employee.getByFatherName(), employee.getAge(), employee.getWorkEx(), employee.getDateOfEmployment())
+	:Employee(employee.getName(), employee.getSurname(), employee.getByFatherName(), employee.getAge(), employee.getWorkEx(), employee.getDateOfEmployment(), employee.getAssign())
 {
 	setRate(rate);
 	setHours(workingHours);
@@ -58,5 +59,4 @@ void HourlyPaidWorker::show() const
 	Employee::show();
 	cout << "Rate for a hour: " << getRate() << endl;
 	cout << "Working hours: " << getHours() << endl;
-	cout << "Salary: " << calculateSalary() << endl;
 }
