@@ -54,4 +54,19 @@ int Employee::calculateSalary() const
 	return 0;
 }
 
+
+string Employee::getDateOfEmploymentString() const
+{
+	string tmp;
+	string tmptmp = to_string(this->dateOfEmployment.day);
+	tmp += tmptmp;
+	tmp.push_back('.');
+	tmptmp = to_string(this->dateOfEmployment.mon);
+	tmp += tmptmp;
+	tmp.push_back('.');
+	tmptmp = to_string(this->dateOfEmployment.year);
+	tmp += tmptmp;
+	return tmp;
+}
+
 int Employee::counter = 0;
