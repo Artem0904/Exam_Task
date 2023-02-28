@@ -13,7 +13,7 @@ public:
     void showEmployes();
     void changeAssign(int id, const string& newAssign);
   
-
+    int getSize() const;
 
 private:
     deque <Employee*> NewBase;
