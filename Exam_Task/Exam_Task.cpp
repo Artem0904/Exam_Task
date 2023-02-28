@@ -18,20 +18,27 @@ int main()
 	FullTimeWorker workerF{ "Olga", "Boyko", "Vasylivna", 25, 3, {22, 10, 2022}, "Designer" };
 	//workerF.show();
 
-	//Спроба створити нового робітника
+	//Г‘ГЇГ°Г®ГЎГ  Г±ГІГўГ®Г°ГЁГІГЁ Г­Г®ГўГ®ГЈГ® Г°Г®ГЎВіГІГ­ГЁГЄГ 
 
 	BaseEmployee base{};
-	base.addNewEmployee(&workerF);
+	/*base.addNewEmployee(&workerF);
 	base.addNewEmployee(&workerH);
 	base.addNewEmployee(&empl);
 	base.sortBase();
-	base.changeAssign(1, "PROGRAMMER");
-	base.showEmployes();
+  base.showEmployes();
+  
 	cout << endl;
 	cout << endl;
 	cout << endl;
 	/*base.findEmployee("Ivanov");*/
-
-
+	base.addNewEmployee();
+	cout << endl;
+	cout << endl;
+	base.addNewEmployee();
+	cout << endl;
+	cout << endl;
+	base.showEmployes();
+	base.deleteEmployee(0);
+	base.showEmployes();
 	
 }
