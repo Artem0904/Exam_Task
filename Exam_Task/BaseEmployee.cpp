@@ -115,3 +115,8 @@ void BaseEmployee::changeAssign(int id, const string& newAssign)
 	}
 }
 
+int BaseEmployee::getSize() const
+{
+	return NewBase.size();
+}
+
