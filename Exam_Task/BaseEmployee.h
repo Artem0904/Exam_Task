@@ -17,6 +17,9 @@ public:
 
 private:
     deque <Employee*> NewBase;
-
+    const int MAX_AGE = 60;
+    const int MIN_AGE = 18;
+    const int MAX_DAY_MONTH = 31;
+    const int MAX_MONTH = 12;
 };
 

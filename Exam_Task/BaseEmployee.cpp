@@ -12,50 +12,52 @@ void BaseEmployee::addNewEmployee(Employee* newEmpl)
 
 void BaseEmployee::addNewEmployee()
 {
-	cout << "Enter the name: " << endl;
+	cout << "Enter the name: ";
 	string name, surName, byFatherName, assign;
 	int age = 0, workExperience = 0, day = 0, month = 0, year = 0;
 	cin >> name;
-	cout << "Enter the Surname: " << endl;
+	cout << "Enter the Surname: ";
 	cin >> surName;
-	cout << "Enter the byFatherName: " << endl;
+	cout << "Enter the byFatherName: ";
 	cin >> byFatherName;
-	cout << "Enter the age: " << endl;
+	cout << "Enter the age: ";
 	do
 	{
-	cin >> age;
-	if (age < 18 || age>60)
-	{
-		cout << "Invalide age. Try again. " << endl;
-	}
-	} while (age<18||age>60);
-	cout << "Enter the work experience: " << endl;
+		cin >> age;
+		if (age < MIN_AGE || age > MAX_AGE)
+		{
+			cout << "Invalide age. Try again : ";
+		}
+	} while (age < MIN_AGE || age > MAX_AGE);
+	cout << "Enter the work experience : " ;
 	cin >> workExperience;
-	cout << "Enter the day: " << endl;
+	cout << "_____ Enter a date of employement _____\n";
+	cout << "Enter the day: ";
 	do
 	{
-	cin >> day;
-	if (day < 1 || day>31)
-	{
-		cout << "Invalide day. Try again. " << endl;
-	}
-	} while (day<1||day>31);
-	cout << "Enter the month:" << endl;
+		cin >> day;
+		if (day <= 0 || day > MAX_DAY_MONTH)
+		{
+			cout << "Invalide day. Try again : ";
+		}
+	} while (day <= 0 || day > MAX_DAY_MONTH);
+	cout << "Enter the month : ";
 	do
 	{
-	cin >> month;
-	if (month < 1 || month>12)
-	{
-		cout << "Invalide month. Try again. " << endl;
-	}
-
-	} while (month<1||month>12);
-	cout << "Enter the year:" << endl;
+		cin >> month;
+		if (month <= 0 || month > MAX_MONTH)
+		{
+			cout << "Invalide month. Try again : ";
+		}
+	} while (month<= 0 || month > MAX_MONTH);
+	cout << "Enter the year : ";
 	cin >> year;
 	Date date{ day,month,year };
-	cout << "Enter the assign: " << endl;
+
+	cout << "Enter the assign : " ;
 	cin >> assign;
-	cout << "What kind of emloyee: \n" << "1. Full time worker\n2. Huorly paid worker" << endl;
+
+	cout << "What kind of emloyee: \n" << "1. Full time worker\n2. Huorly paid worker ... ";
 	int choose = 0;
 	cin >> choose;
 	if (choose==1)
@@ -66,10 +68,10 @@ void BaseEmployee::addNewEmployee()
 	else
 	{
 		int rate = 0;
-		cout << "Enter the rate: " << endl;
+		cout << "Enter the rate : " ;
 		cin >> rate;
 		int workingHours = 0;
-		cout << "Enter the working hours: " << endl;
+		cout << "Enter the working hours : ";
 		cin >> workingHours;
 		HourlyPaidWorker* tmp = new HourlyPaidWorker{ name,surName,byFatherName,age,workExperience,date,assign, rate,workingHours };
 		NewBase.push_back(tmp);
