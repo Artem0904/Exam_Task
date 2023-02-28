@@ -8,22 +8,24 @@
 int main()
 {
 	Person p{ "Victor", "Victorski", "Victorovich", 15 };
-	p.show();
+	//p.show();
 
 	Employee empl{ "Ivan", "Ivanov", "Ivanovich", 20, 15, {15, 9, 2013}, "Team lead" };
 
 	HourlyPaidWorker workerH{ empl, 500, 160 };
-	workerH.show();
+	//workerH.show();
 
 	FullTimeWorker workerF{ "Olga", "Boyko", "Vasylivna", 25, 3, {22, 10, 2022}, "Designer" };
-	workerF.show();
+	//workerF.show();
 
 	//Спроба створити нового робітника
+
 	BaseEmployee base{};
 	base.addNewEmployee(&workerF);
 	base.addNewEmployee(&workerH);
 	base.addNewEmployee(&empl);
 	base.sortBase();
+	base.changeAssign(1, "PROGRAMMER");
 	base.showEmployes();
 	cout << endl;
 	cout << endl;
