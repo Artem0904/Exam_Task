@@ -11,6 +11,8 @@ public:
     void sortBase();
     //void findEmployee(string surName);
     void showEmployes();
+    void changeAssign(int id, const string& newAssign);
+  
 
 
 private:

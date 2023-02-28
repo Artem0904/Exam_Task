@@ -17,7 +17,9 @@ public:
     void setAssign(const string& assign);
     virtual void show() const;
     virtual int calculateSalary() const;
-    
+
+    string getDateOfEmploymentString() const;
+
 private:
     int id;
     int workExperience; //стаж

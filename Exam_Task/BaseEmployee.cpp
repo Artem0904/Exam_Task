@@ -98,6 +98,18 @@ void BaseEmployee::showEmployes()
 	for (auto& b : NewBase)
 	{
 		b->show();
+		cout << endl;
+	}
+}
+
+void BaseEmployee::changeAssign(int id, const string& newAssign)
+{
+	for (auto& i : NewBase)
+	{
+		if (i->getId() == id && !empty(newAssign))
+		{
+			i->setAssign(newAssign);
+		}
 	}
 }
 
